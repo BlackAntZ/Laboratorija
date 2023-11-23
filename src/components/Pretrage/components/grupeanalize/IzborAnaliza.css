@@ -1,0 +1,323 @@
+.ia_container {
+  height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-gray-50);
+  flex: 1;
+}
+
+.ia_loader_container {
+  position: absolute;
+  top: 28em;
+  left: 55%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ia_header {
+  display: flex;
+  flex-direction: row;
+  padding: 0 0.5em;
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.ia_header div {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.ia_header div:nth-child(-n + 5) {
+  margin: 0 0.5em;
+}
+
+.ia_header div:nth-child(n + 6) {
+  margin-right: 0.75em;
+}
+
+.ia_header p {
+  color: var(--color-labos-400);
+  margin-block-end: 0;
+  padding-bottom: 0.15em;
+  cursor: pointer;
+}
+
+.ia_tab {
+  font-size: 0.9em;
+  font-stretch: semi-expanded;
+  padding: 0 0.5em;
+}
+
+.ia_naslov {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  font-weight: 700;
+  font-size: 1.25em;
+  cursor: default;
+}
+
+.ia_naslov p {
+  margin: 0;
+  padding: 0;
+}
+
+.izabranaGrupa {
+  border-bottom: 0.5em solid var(--color-labos-400);
+  background-color: var(--color-gray-100);
+}
+
+.izabranaGrupa p,
+.izabranaPodGrupa p,
+.izabranaPodGrupaGas p {
+  font-weight: 700;
+  color: var(--color-labos-500);
+}
+
+.izabranaPodGrupa p {
+  border-bottom: 0.25em solid var(--color-error-210);
+}
+
+.izabranaPodGrupaGas {
+  border-bottom: 0.25em solid var(--color-error-170);
+}
+
+.ia_main {
+  height: 100%;
+  display: flex;
+  /* flex-direction: row;
+  padding: 0.15em 0;
+  height: 100%;
+  gap: 0.25em; */
+}
+
+.ia_rutina {
+  display: grid;
+  grid-template-columns: 2.1fr 1.1fr 1fr;
+  gap: 0.25em;
+  padding: 0.15em 0.25em;
+  height: 100%;
+}
+
+.ia_lista {
+  padding: 0 0.25em;
+}
+
+.podgrupa_header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.65em;
+  margin-left: 0.75em;
+}
+
+.podgrupa_header div {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.podgrupa_header p {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.25em;
+  margin-bottom: 0.15em;
+  padding: 0 0.5em;
+  font-size: 0.95em;
+}
+
+.dugme,
+.uredi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uredi {
+  margin-left: 0.25em;
+}
+
+.slanje {
+  width: 100%;
+  height: 10vh;
+}
+
+.dugme button {
+  padding: 0.5em 0.75em;
+  background-color: var(--color-labos-400);
+  border: 2px solid var(--color-labos-400);
+  border-radius: var(--border-radius-small);
+  color: var(--color-primary-200);
+  /* font-size: 1.1em; */
+  cursor: pointer;
+}
+
+.dugme_alt button {
+  background-color: var(--color-error-600);
+  border: 2px solid var(--color-error-600);
+}
+
+.dugme button:hover {
+  background-color: var(--color-primary-200);
+  color: var(--color-labos-400);
+}
+
+.unos button,
+.slanje button {
+  padding: 0.25em 0.5em;
+  background-color: var(--color-primary-200);
+  border: 2px solid var(--color-labos-400);
+  border-radius: var(--border-radius-small);
+  color: var(--color-labos-400);
+  font-size: 1.1em;
+  font-weight: 500;
+  font-stretch: semi-expanded;
+  cursor: pointer;
+}
+
+.unos button:hover,
+.slanje button:hover {
+  background-color: var(--color-labos-400);
+  color: var(--color-primary-200);
+}
+
+.slanje button {
+  font-size: 0.9em;
+  padding: 0.5em 0.5em;
+  bottom: 3em;
+}
+
+.uredi i {
+  color: var(--color-labos-400);
+  font-size: 2.15rem;
+  border: rgba(255, 255, 255, 0) solid 2px;
+}
+
+.uredi i:hover {
+  color: var(--color-primary-250);
+}
+
+.uredi_aktivno i {
+  border: var(--color-labos-400) dashed 2px;
+  border-radius: var(--border-radius-small);
+}
+
+.uredi_aktivno i:hover {
+  color: var(--color-labos-400);
+}
+
+.draw_menu {
+  padding: 2.5em 1em 0 1em;
+}
+
+.draw_menu > p {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: var(--color-labos-400);
+}
+
+.lista_dodatih_usluga {
+  width: 93%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: auto;
+  font-size: 0.9em;
+  border: 2px solid var(--color-primary-300);
+  border-radius: var(--border-radius-small);
+  margin: 2em auto 0 auto;
+  color: var(--color-labos-400);
+}
+
+.lista_dodatih_usluga::-webkit-scrollbar {
+  width: 0.3rem;
+  background-color: transparent;
+}
+
+.lista_dodatih_usluga::-webkit-scrollbar-track {
+  border-radius: 100vw;
+}
+
+.lista_dodatih_usluga::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 100vw;
+}
+
+.lista_dodatih_usluga:hover::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray-200);
+}
+
+.lista_dodatih_usluga p {
+  text-align: center;
+}
+
+.lista_dodatih_usluga > ol > li {
+  padding: 0.25em 0;
+}
+
+.draw_backdrop {
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+}
+
+.bx-trash {
+  font-size: 1.15em;
+  color: var(--color-error-400);
+  cursor: pointer;
+  margin-left: 0.5em;
+}
+
+/* .search_box-dropdown_select {
+  border: 1px solid var(--color-primary-250) !important;
+  border-radius: var(--border-radius-small) !important;
+}
+
+.search_box-dropdown_select:hover {
+  border-color: var(--color-primary-300) !important;
+} */
+
+/*.react-search-box-dropdown {
+  max-height: 720px;
+  overflow-y: auto;
+}
+
+.bx-test-tube {
+  font-size: 1.5em;
+  color: var(--color-labos-400);
+}
+
+ .react-search-box-dropdown::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: #f5f5f5;
+}
+
+.react-search-box-dropdown::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.react-search-box-dropdown::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px var(--color-labos-500);
+  background-color: #555;
+}
+
+  "&::-webkit-scrollbar": {
+        width: "0.3rem",
+        backgroundColor: "transparent,",
+      },
+      "&::-webkit-scrollbar-track": {
+        borderRadius: "100vw",
+      },
+      "&::-webkit-scrollbar-thumb": {
+        backgroundColor: "transparent,",
+        borderRadius: "100vw",
+      },
+      ":hover::-webkit-scrollbar-thumb": {
+        backgroundColor: "var(--color-gray-200)",
+      },
+ */

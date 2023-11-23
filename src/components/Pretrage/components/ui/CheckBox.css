@@ -1,0 +1,67 @@
+.label_container {
+  display: flex;
+  position: relative;
+  padding-left: 1.5em;
+  margin-left: 0.5em;
+  margin-bottom: 0.4em; /*zbijenost checkbox-ova u koloni*/
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: left;
+}
+
+.label_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.naziv_usluge {
+  margin: 0;
+  display: flex;
+  font-size: 0.9em;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: var(--color-primary-200);
+}
+
+.label_container:hover input ~ .checkmark {
+  background-color: var(--color-labos-150);
+}
+
+.label_container input:checked ~ .checkmark {
+  background-color: var(--color-primary-300);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.label_container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.label_container .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 3px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
